@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProMeuble Service</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .section {
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+
+        .presentation {
+            text-align: center;
+        }
+
+        .avis {
+            text-align: center;
+        }
+
+        h1, h2 {
+            color: #333;
+            cursor: pointer;
+        }
+
+        /* Styles pour activités */
+        .activite {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .activite-item {
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 20px;
+            margin: 10px;
+            width: 200px;
+            text-align: center;
+            border-radius: 5px;
+            position: relative;
+        }
+
+        /* Styles pour le formulaire d'avis */
+        .avis-form {
+            margin: 20px auto;
+            max-width: 600px;
+            padding: 20px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+        }
+
+        .avis-form input,
+        .avis-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .star-rating {
+            display: flex;
+            justify-content: center;
+            margin: 10px 0;
+        }
+
+        .star {
+            font-size: 24px;
+            cursor: pointer;
+            color: #ddd;
+        }
+
+        .star.selected {
+            color: gold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Section Accueil -->
+    <section id="accueil" class="section accueil">
+        <h1>ProMeuble Service (PMS)</h1>
+        <p>Bienvenue chez ProMeuble Service, votre solution pour tous vos besoins en meubles, électricité, et déménagements.</p>
+
+        <!-- Activités -->
+        <div class="activite">
+            <div class="activite-item" style="background-image: url('image1.jpg');">
+                <h2><a href="montage.html" style="color: white; text-decoration: none;">Montage de meuble</a></h2>
+                <p>Dressing, Lit, Canapé, Commode, Bureau, Étagère, Meuble TV…</p>
+            </div>
+            <div class="activite-item" style="background-image: url('image2.jpg');">
+                <h2><a href="electricite.html" style="color: white; text-decoration: none;">Électricité</a></h2>
+                <p>Installation des Lustres, Luminaires et Lampes.</p>
+            </div>
+            <div class="activite-item" style="background-image: url('image3.jpg');">
+                <h2><a href="service.html" style="color: white; text-decoration: none;">Service à domicile</a></h2>
+                <p>Installation des Stores, Livraison des meubles à domicile.</p>
+            </div>
+            <div class="activite-item" style="background-image: url('image4.jpg');">
+                <h2><a href="demenagement.html" style="color: white; text-decoration: none;">Déménagement</a></h2>
+                <p>Déménagement, récupération, Vide caves.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Présentation de l'entreprise -->
+    <section id="presentation" class="section presentation">
+        <h2>Présentation de ProMeuble Service</h2>
+        <p><strong>ProMeuble Service</strong> est une entreprise spécialisée dans la prestation de services liés au montage de meubles, à l'électricité domestique, au service à domicile, ainsi qu'aux déménagements. Forts de notre expertise et de notre expérience, nous offrons des solutions complètes et personnalisées à nos clients pour répondre à leurs besoins avec efficacité et professionnalisme.</p>
+        
+        <p>Notre équipe qualifiée intervient avec rigueur pour le montage de meubles (dressing, lit, canapé, etc.), l’installation électrique (lustres, luminaires), l'installation de stores, ainsi que le déménagement et le vide de caves. Nous veillons à offrir un service de qualité, rapide et adapté à vos exigences.</p>
+
+        <p>Votre satisfaction est notre priorité. Nous vous accompagnons à chaque étape de vos projets, avec un suivi attentif et des conseils d’experts.</p>
+
+        <p><strong>ProMeuble Service</strong> s'engage à fournir un travail soigné et à respecter les délais impartis, afin de garantir votre tranquillité et votre confort.</p>
+
+        <p>N'hésitez pas à nous contacter pour obtenir un devis gratuit ou des informations supplémentaires. Nous serions ravis de vous aider à réaliser vos projets.</p>
+    </section>
+
+    <!-- Section Contact -->
+    <section id="contact" class="section contact">
+        <h2>Demande de Contact ou Devis</h2>
+        
+        <!-- Informations de contact -->
+        <p>Pour nous contacter directement :</p>
+        <ul>
+            <li>Email : <a href="mailto:promeubleservice@gmail.com">promeubleservice@gmail.com</a></li>
+            <li>Téléphone : <a href="tel:+32466260630">+32 466 26 06 30</a></li>
+        </ul>
+    </section>
+
+    <!-- Section Avis des clients -->
+    <section id="avis" class="section avis">
+        <h2>Avis des Clients</h2>
+        <div class="avis-form">
+            <h3>Déposez votre avis</h3>
+            <form id="avisForm">
+                <div class="star-rating" id="star-rating">
+                    <span class="star" data-value="1">&#9733;</span>
+                    <span class="star" data-value="2">&#9733;</span>
+                    <span class="star" data-value="3">&#9733;</span>
+                    <span class="star" data-value="4">&#9733;</span>
+                    <span class="star" data-value="5">&#9733;</span>
+                </div>
+                <input type="text" placeholder="Votre nom" required>
+                <textarea placeholder="Votre avis" required></textarea>
+                <button type="submit">Envoyer</button>
+            </form>
+        </div>
+        <div id="avisList">
+            <h3>Avis reçus :</h3>
+            <ul id="avisUl">
+                <!-- Les avis seront affichés ici -->
+            </ul>
+        </div>
+    </section>
+
+    <script>
+        const starRating = document.getElementById('star-rating');
+        let ratingValue = 0;
+
+        // Gérer la sélection des étoiles
+        starRating.addEventListener('click', (e) => {
+            if (e.target.classList.contains('star')) {
+                ratingValue = e.target.getAttribute('data-value');
+                const stars = starRating.querySelectorAll('.star');
+                stars.forEach((star, index) => {
+                    star.classList.toggle('selected', index < ratingValue);
+                });
+            }
+        });
+
+        // Gérer l'envoi du formulaire
+        document.getElementById('avisForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Empêcher l'envoi du formulaire
+            const name = this.querySelector('input').value;
+            const message = this.querySelector('textarea').value;
+
+            // Créer un nouvel élément d'avis
+            const li = document.createElement('li');
+            li.textContent = `${name} (Évaluation: ${ratingValue} étoiles): ${message}`;
+            document.getElementById('avisUl').appendChild(li);
+
+            // Réinitialiser le formulaire
+            this.reset();
+            ratingValue = 0;
+            starRating.querySelectorAll('.star').forEach(star => star.classList.remove('selected'));
+        });
+    </script>
+</body>
+
+</html>

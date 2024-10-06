@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Montage de meuble - ProMeuble Service</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .section {
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+
+        .nav {
+            text-align: right;
+        }
+
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <a href="index.html">Accueil</a>
+    </div>
+    
+    <section class="section">
+        <h1>Montage de meuble</h1>
+        <p>Bienvenue dans notre section dédiée au montage de meubles.</p>
+        <p>Dressing, Lit, Canapé, Commode, Bureau, Étagère, Meuble TV…</p>
+
+        <!-- Espace pour les travaux -->
+        <h3>Mes Travaux de Montage de Meuble</h3>
+        <div id="montageImages" class="work-images">
+            <!-- Les images de montage de meubles seront affichées ici -->
+        </div>
+        <div class="upload-section">
+            <input type="file" accept="image/*" onchange="uploadImage(event, 'montageImages')">
+            <button onclick="clearImages('montageImages')">Effacer les Images</button>
+        </div>
+    </section>
+
+    <script>
+        function uploadImage(event, sectionId) {
+            const file = event.target.files[0];
+            const img = document.createElement('img');
+            img.src = URL.createObjectURL(file);
+            document.getElementById(sectionId).appendChild(img);
+        }
+
+        function clearImages(sectionId) {
+            const section = document.getElementById(sectionId);
+            while (section.firstChild) {
+                section.removeChild(section.firstChild);
+            }
+        }
+    </script>
+</body>
+
+</html>

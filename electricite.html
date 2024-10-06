@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Électricité - ProMeuble Service</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .section {
+            padding: 20px;
+            margin: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            background: #f9f9f9;
+        }
+
+        .nav {
+            text-align: right;
+        }
+
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <a href="index.html">Accueil</a>
+    </div>
+    
+    <section class="section">
+        <h1>Électricité</h1>
+        <p>Bienvenue dans notre section dédiée à l'électricité.</p>
+        <p>Installation des Lustres, Luminaires et Lampes.</p>
+
+        <!-- Espace pour les travaux -->
+        <h3>Mes Travaux d'Électricité</h3>
+        <div id="electriciteImages" class="work-images">
+            <!-- Les images d'électricité seront affichées ici -->
+        </div>
+        <div class="upload-section">
+            <input type="file" accept="image/*" onchange="uploadImage(event, 'electriciteImages')">
+            <button onclick="clearImages('electriciteImages')">Effacer les Images</button>
+        </div>
+    </section>
+
+    <script>
+        function uploadImage(event, sectionId) {
+            const file = event.target.files[0];
+            const img = document.createElement('img');
+            img.src = URL.createObjectURL(file);
+            document.getElementById(sectionId).appendChild(img);
+        }
+
+        function clearImages(sectionId) {
+            const section = document.getElementById(sectionId);
+            while (section.firstChild) {
+                section.removeChild(section.firstChild);
+            }
+        }
+    </script>
+</body>
+
+</html>
